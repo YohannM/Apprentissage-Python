@@ -1,1 +1,2 @@
-plt
+
+        if noeud.fd == None:
