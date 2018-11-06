@@ -15,5 +15,5 @@ def append_bis(tab,a):
 # s = "coucou"
 # print(s[1:len(s)])
 
-a = combi("abc")
+a = combi("trying")
 print(a)

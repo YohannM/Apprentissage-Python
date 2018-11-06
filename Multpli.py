@@ -1,5 +1,4 @@
 """module multipli contenant la fonction table"""
-
 import os
 
 
@@ -15,3 +14,5 @@ def table(nb, maxi=10):
 if __name__ == "__main__":
     table(8, 5)
     os.system("pause")
+
+
