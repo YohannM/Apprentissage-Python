@@ -35,4 +35,6 @@ class MySuperButton(Button):
 
 if __name__ == "__main__":
     pla = PageLayoutApp()
-    pla.run()
+    pla
+    
+    .run()
