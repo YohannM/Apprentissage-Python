@@ -101,6 +101,28 @@ def supprimer(ABR, val):
         feuilleASupp = None
 
 
+def estArbreDeRecherche(racine):
+    if racine != None:
+        if racine.fg != None and racine.fd != None:
+            return racine.fg.val <= racine.val and racine.fd.val >= racine.val and estArbreDeRecherche(racine.fg) and estArbreDeRecherche(racine.fd)
+        elif racine.fg != None:
+            return racine.fg.val <= racine.val and estArbreDeRecherche(racine.fg)
+        elif racine.fd != None:
+            return racine.fd.val >= racine.val and estArbreDeRecherche(racine.fd)
+    return True
+
+
+def sommeArbreDeRecherche(racine):
+    if racine == None:
+        return 0
+    return racine.val + sommeArbreDeRecherche(racine.fg) + sommeArbreDeRecherche(racine.fd)
+
+
+def regFile(maFile, abr):
+    if abr != None:
+        regFile(maFile, abr.fg)
+        maFile.enqueue(abr.val)
+        regFile(maFile, abr.fd)
 
 
 if __name__ == '__main__':
